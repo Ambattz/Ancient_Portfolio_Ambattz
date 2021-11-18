@@ -1,6 +1,4 @@
-- 👋 Hi, I’m @Ambattz 
-
-  ### A humble organized productive geek who is longing for opportunities so that he can use his skills for the greater good.
+- 👋 Hi, I’m @Ambattz here
   ---
 - 👀 I’m interested in 
   
