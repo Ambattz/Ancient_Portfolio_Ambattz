@@ -10,13 +10,13 @@
   
   ### **React & Ethereum**
 ---
-- 💞️ I’m looking to collaborate on ...
+- 💞️ I’m looking to collaborate on
   
   ### **Web Development**
 ---
-- 📫 How to reach me ...
+- 📫 How to reach 
 
-  #### <i class="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsimilarpng.com%2Fillustration-of-linkedin-icon-on-transparent-background-png%2F&psig=AOvVaw2JyluAO8xsgQygZ-0bY84V&ust=1637293879455000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNix_5GBofQCFQAAAAAdAAAAABAJ"></i> LinkedIN
+  [Ambattz](https://www.linkedin.com/in/ambattz/)
   ---
 
 <!---
