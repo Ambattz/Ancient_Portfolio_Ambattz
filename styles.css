@@ -1,0 +1,25 @@
+.navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.nav-link {
+  font-size: x-large;
+  padding: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: #e8e8e8;
+}
+.nav-link:hover,
+img:hover {
+  -webkit-transform: scale(1.5);
+  color: #f05454;
+}
+
+.itemsl {
+  padding-left: 100px;
+}
+.itemsr {
+  padding-right: 100px;
+}
