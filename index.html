@@ -20,17 +20,17 @@
         <div class="navigation">
             <img src="images/favicon.png" style="display:block; float: left;">
             <ul>
-                <li class="list active"><a href="#"><span class="icon">
+                <li class="list active"><a href="#home"><span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span><span class="text">Home</span></a>
                 </li>
-                <li class="list"><a href="#"><span class="icon">
+                <li class="list"><a href="#profile"><span class="icon">
                             <ion-icon name="person-circle-outline"></ion-icon>
-                        </span><span class="text">Portfolio</span></a></li>
-                <li class="list"><a href="#"><span class="icon">
+                        </span><span class="text">Profile</span></a></li>
+                <li class="list"><a href="#expertise"><span class="icon">
                             <ion-icon name="medal-outline"></ion-icon>
                         </span><span class="text">Expertise</span></a></li>
-                <li class="list"><a href="#"><span class="icon">
+                <li class="list"><a href="#contact"><span class="icon">
                             <ion-icon name="call-outline"></ion-icon>
                         </span><span class="text">Contact</span></a></li>
                 <div class="indicator">
@@ -41,86 +41,72 @@
     </div>
 
 
-    <div class="home">
-        
-    </div>
+    <div class="home" id="home">
 
-    <div class="Portfolio">
+        <div class="portfolio" id="profile">
 
-    </div>
-
-    <div class="expertise">
-
-    </div>
+            <div class="expertise" id="expertise">
 
 
-    <div class="footer">
-        <footer>
-            <div class="waves">
-                <div class="wave" id="wave1"></div>
-                <div class="wave" id="wave2"></div>
-                <div class="wave" id="wave3"></div>
-                <div class="wave" id="wave4"></div>
-            </div>
-            <div class="iconlist">
-                <ul class="footerlist">
-                    <li><a href="https://www.facebook.com/Ambattz">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a></li>
-                    <li><a href="https://www.instagram.com/ambattz/">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a></li>
-                    <li><a href="https://twitter.com/ambattz">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a></li>
-                    <li><a href="https://www.linkedin.com/in/ambattz/">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a></li>
-                    <li><a href="https://github.com/Ambattz">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a></li>
-                    <li><a href="https://stackoverflow.com/users/17321485/ambattz">
-                            <ion-icon name="logo-stackoverflow"></ion-icon>
-                        </a></li>
-                    <li><a href="mailto:work.a.ambattu@gmail.com">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </a></li>
-                </ul>
-            </div>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Expertise</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <p>
-                © Copyright 2021 Ambattz | All rights reserved | Privacy Policy
-            </p>
-        </footer>
-    </div>
+                <div class="footer" id="contact">
+                    <footer>
+                        <div class="waves">
+                            <div class="wave" id="wave1"></div>
+                            <div class="wave" id="wave2"></div>
+                            <div class="wave" id="wave3"></div>
+                            <div class="wave" id="wave4"></div>
+                        </div>
+                        <div class="iconlist">
+                            <ul class="footerlist">
+                                <li><a href="https://www.facebook.com/Ambattz">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a></li>
+                                <li><a href="https://www.instagram.com/ambattz/">
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </a></li>
+                                <li><a href="https://twitter.com/ambattz">
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                    </a></li>
+                                <li><a href="https://www.linkedin.com/in/ambattz/">
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                    </a></li>
+                                <li><a href="https://github.com/Ambattz">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                    </a></li>
+                                <li><a href="https://stackoverflow.com/users/17321485/ambattz">
+                                        <ion-icon name="logo-stackoverflow"></ion-icon>
+                                    </a></li>
+                                <li><a href="mailto:work.a.ambattu@gmail.com">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#profile">Profile</a></li>
+                            <li><a href="#expertise">Expertise</a></li>
+                        </ul>
+                        <p>
+                            © Copyright 2021 Ambattz | All rights reserved | Privacy Policy
+                        </p>
+                    </footer>
+                </div>
 
-    <script>
-        const list = document.querySelectorAll('.list');
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) =>
-            item.addEventListener('click', activeLink));
+                <script>
 
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+                </script>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                    crossorigin="anonymous"></script>
+                <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
