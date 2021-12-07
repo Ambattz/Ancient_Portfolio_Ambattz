@@ -15,12 +15,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding-top: 40px;
 }
 
 .navigation {
-  width: 500px;
-  height: 70px;
+  width: 650px;
+  height: 80px;
   background: #3586ff;
   display: flex;
   align-items: center;
@@ -30,6 +30,7 @@ body {
 .navigation img {
   padding: 10px;
   padding-left: 40px;
+  padding-right: 100px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -102,12 +103,10 @@ body {
 .indicator {
   position: absolute;
   top: -1%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: #3586ff;
   border-radius: 50%;
-  /* border: 10px solid #30475e; */
-  /* z-index: 1; */
   transition: 0.5s;
 }
 
@@ -135,19 +134,22 @@ body {
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(70px * 0));
+  transform: translateX(calc(60px * 0));
 }
 
 .navigation ul li:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(70px * 1));
+  transform: translateX(calc(61px * 1));
 }
 
 .navigation ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(70px * 2));
+  transform: translateX(calc(62px * 2));
 }
 
 .navigation ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(70px * 3));
+  transform: translateX(calc(63px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(62px * 4));
 }
 
 .home {
@@ -179,7 +181,7 @@ footer {
   position: relative;
   width: 100%;
   background: #3586ff;
-  min-height: 100px;
+  min-height: 500px;
   padding: 20px 50px;
   flex-direction: column;
 }
