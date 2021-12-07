@@ -1,4 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -50,7 +55,7 @@ body {
   list-style: none;
   width: 70px;
   height: 70px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navigation ul li a {
@@ -103,7 +108,7 @@ body {
 
 .indicator {
   position: absolute;
-  top: -1%;
+  top: 5%;
   width: 60px;
   height: 60px;
   background: #3586ff;
@@ -114,7 +119,7 @@ body {
 .indicator::before {
   content: "";
   position: absolute;
-  top: 18%;
+  top: 7%;
   left: -28px;
   width: 30px;
   height: 30px;
@@ -125,7 +130,7 @@ body {
 .indicator::after {
   content: "";
   position: absolute;
-  top: 18%;
+  top: 7%;
   right: -28px;
   width: 30px;
   height: 30px;
@@ -174,22 +179,48 @@ body {
   letter-spacing: 5px;
 }
 
-.home img {
+.profile {
+  margin: 0%;
+  display: flex;
+  position: relative;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  border-radius: 0%;
+  background: #30475e;
+  color: #e8e8e8;
+  z-index: -1;
 }
 
-.profile {
+.profile img {
+  display: flex;
+  margin: 0%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  max-width: 25%;
+  max-height: 50%;
+}
+.ability {
+}
+
+.footermsg {
+  padding-top: 290px;
   margin: 0%;
   display: flex;
   flex-direction: column;
   border-radius: 0%;
   background: #30475e;
+  justify-content: center;
   align-items: center;
   color: #e8e8e8;
 }
-.ability {
+.footermsg h1 {
+  font-family: "Brush Script MT";
+  font-size: 60px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: 10px;
 }
 
 .footer {
@@ -197,6 +228,8 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   background: #30475e;
+  padding-top: 70px;
+  height: 50%;
 }
 
 footer {
@@ -206,7 +239,7 @@ footer {
   position: relative;
   width: 100%;
   background: #3586ff;
-  min-height: 500px;
+  min-height: 350px;
   padding: 20px 50px;
   flex-direction: column;
 }
@@ -320,3 +353,10 @@ footer .wave#wave4 {
     background-position-x: 1000px;
   }
 }
+
+@media only screen and (max-width: 500) {
+  body {
+    transform: scale(.5);
+  }
+}
+
