@@ -28,8 +28,8 @@ body {
   display: flex;
   justify-content: left;
   align-items: center;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 75%;
+  max-height: 75%;
 }
 
 .navigation ul {
@@ -68,7 +68,7 @@ body {
   transition: 0.5s;
   color: #e8e8e8;
 }
-.navigation ul li:hover a .icon {
+.navigation ul li.active a .icon {
   transform: translateY(-35px);
 }
 .navigation ul li a .text {
@@ -82,8 +82,59 @@ body {
   transform: translateY(10px);
 }
 
-.navigation ul li:hover a .text {
+.navigation ul li.active a .text {
   opacity: 1;
+  transform: translateY(10px);
+}
+
+.indicator {
+  position: absolute;
+  top: -0.1%;
+  width: 70px;
+  height: 70px;
+  background: #3586ff;
+  border-radius: 25%;
+  border: 10px solid #30475e;
+  transition: 0.5s;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 61.5%;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+  background:transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 0 #30475e;
+} 
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 61.5%;
+  right: -28px;
+  width: 20px;
+  height: 20px;
+  background:transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 #30475e;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
 }
 
 .footer {
