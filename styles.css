@@ -18,11 +18,11 @@ body {
   flex-direction: column;
   padding-left: 2%;
   padding-right: 2%;
-  background: transparent;
+  background:#30475e;
 }
 .navigation {
   position: fixed;
-  top: 5%;
+  top: 8%;
   width: 35rem;
   background: #3586ff;
   display: flex;
@@ -191,10 +191,6 @@ body {
   color: #3586ff;
 }
 @media only screen and (max-width: 600px) {
-  .home {
-    padding-top: 10rem;
-    padding-bottom: 4rem;
-  }
   .home h1 {
     font-size: 1.5rem;
     line-height: 2rem;
