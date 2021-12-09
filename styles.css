@@ -1,6 +1,7 @@
 /* ------------------------------------------- HTML Styles ------------------------------------------- */
 html {
   scroll-behavior: smooth;
+  /* overflow:visible; */
 }
 /* ------------------------------------------- Body Styles ------------------------------------------- */
 body {
@@ -18,7 +19,7 @@ body {
   flex-direction: column;
   padding-left: 2%;
   padding-right: 2%;
-  background:#30475e;
+  background: #30475e;
 }
 .navigation {
   position: fixed;
@@ -160,9 +161,9 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0%;
-  padding-top: 20rem;
-  padding-bottom: 8rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   color: #e8e8e8;
   background: #30475e;
@@ -209,32 +210,50 @@ body {
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
 .profile {
-  margin: 0%;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0%;
   background: #30475e;
   color: #e8e8e8;
-  z-index: -1;
-}
-.profile img {
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-top: 13rem;
+  padding-bottom: 8rem;
   display: flex;
-  margin: 0%;
-  position: relative;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  max-width: 25%;
-  max-height: 50%;
+}
+.profile .profile-title {
+  font-weight: 50%;
+}
+.profile h1 {
+  padding: 0.2rem;
+  padding-right: 15px;
+  background: #3586ff;
+  color: #e8e8e8;
+  text-align: end;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+.profile .profile-desc {
+  margin: 0%;
+  padding: 0%;
+}
+.profile .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25%;
+}
+.profile .desc {
+  padding: 2%;
+  text-align: justify;
 }
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
-.ability {
-}
+
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
-.contact {
-}
+
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
 .foo {
   display: flex;
