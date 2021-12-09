@@ -16,14 +16,13 @@ body {
   display: flex;
   place-items: center;
   flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
   padding-left: 2%;
   padding-right: 2%;
-  background: #30475e;
+  background: transparent;
 }
 .navigation {
   position: fixed;
+  top: 5%;
   width: 35rem;
   background: #3586ff;
   display: flex;
@@ -169,7 +168,7 @@ body {
   background: #30475e;
 }
 .home h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
@@ -198,10 +197,9 @@ body {
   }
   .home h1 {
     font-size: 1.5rem;
-    line-height: 4rem;
+    line-height: 2rem;
     letter-spacing: 0.15rem;
   }
-
   .desc {
     display: flex;
     justify-content: center;
