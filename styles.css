@@ -179,14 +179,39 @@ body {
   justify-content: center;
   align-items: center;
 }
+.autotyper {
+  color: #3586ff;
+}
 .desc {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .stressed {
-  font-size: xx-large;
+  font-size: x-large;
   color: #3586ff;
+}
+@media only screen and (max-width: 600px) {
+  .home {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+  .home h1 {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+  }
+  .stressed {
+    font-size: small;
+    color: #3586ff;
+  }
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
 .profile {
