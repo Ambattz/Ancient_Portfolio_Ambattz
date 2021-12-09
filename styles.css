@@ -16,7 +16,7 @@ body {
   display: flex;
   place-items: center;
   flex-direction: column;
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   padding-left: 2%;
   padding-right: 2%;
@@ -29,7 +29,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 .navigation img {
   padding-bottom: 3%;
@@ -38,17 +40,15 @@ body {
 }
 .navigation ul {
   display: flex;
-  margin-bottom: 1%;
   padding: 0%;
 }
 .navigation ul li {
   padding-top: 0.8rem;
-
   position: relative;
   list-style: none;
   width: 80px;
-  height: 80px;
-  z-index: 2;
+  height: 40px;
+  z-index: 1;
 }
 .navigation ul li a {
   text-decoration: none;
@@ -57,7 +57,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   width: 100%;
   text-align: 100%;
   font-weight: 500;
@@ -78,7 +77,7 @@ body {
 .navigation ul li a .text {
   position: absolute;
   color: #30475e;
-  padding: 2px 7px;
+  padding: 5px 7px;
   border-radius: 12px;
   background: #30475e;
   font-weight: 400;
@@ -124,17 +123,20 @@ body {
     max-width: 15%;
     max-height: 15%;
   }
+  .navigation ul li {
+    width: 50px;
+    height: 30px;
+  }
+  .navigation ul li a .icon {
+    font-size: 1.5em;
+  }
+  .navigation ul li a .text {
+    font-size: 0.5em;
+  }
   .indicator {
     top: -38%;
     width: 50px;
     height: 50px;
-  }
-  .navigation ul li {
-    width: 50px;
-    height: 50px;
-  }
-  .navigation ul li a .icon {
-    font-size: 1.5em;
   }
   .navigation ul li:nth-child(1).active ~ .indicator {
     transform: translateX(calc(50px * 0));
@@ -151,14 +153,12 @@ body {
   .navigation ul li:nth-child(5).active ~ .indicator {
     transform: translateX(calc(50px * 4));
   }
-  .navigation ul li a .text {
-    font-size: 0.5em;
-  }
 }
 /* ------------------------------------------- Home Styles ------------------------------------------- */
+#home {
+  background: #30475e;
+}
 .home {
-  padding-top: 350px;
-  padding-bottom: 350px;
   margin: 0%;
   display: flex;
   flex-direction: column;
@@ -188,7 +188,6 @@ body {
   color: #e8e8e8;
   z-index: -1;
 }
-
 .profile img {
   display: flex;
   margin: 0%;
@@ -203,81 +202,47 @@ body {
 .ability {
 }
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
-
+.contact {
+}
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
-.footermsg {
-  padding-top: 290px;
-  margin: 0%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0%;
-  background: #30475e;
-  justify-content: center;
-  align-items: center;
-  color: #e8e8e8;
-}
-.footermsg h1 {
-  font-family: "Brush Script MT";
-  font-size: 60px;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: 10px;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background: #30475e;
-  padding-top: 70px;
-  height: 50%;
-}
-
-footer {
+.foo {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
   background: #3586ff;
-  min-height: 350px;
-  padding: 20px 50px;
+  padding: 10px 25px;
   flex-direction: column;
 }
-
-footer .footerlist,
-footer .menu {
+.foo .foolist,
+.foo .foomenu {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 0%;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0%;
 }
-
 .iconlist {
-  padding-top: 75px;
+  padding-top: 30px;
 }
-
-footer .footerlist li,
-footer .menu li {
+.foo .foolist li,
+.foo .foomenu li {
   list-style: none;
 }
-
-footer .footerlist li a {
+.foo .foolist li a {
   font-size: 2em;
   color: #e8e8e8;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-
-footer .footerlist li a:hover {
-  transform: translateY(-10px);
+.foo .foolist li a:hover {
+  transform: translateY(-15px);
 }
-
-footer .menu li a {
+.foo .foomenu li a {
   font-size: 1em;
   color: #e8e8e8;
   margin: 0 10px;
@@ -286,58 +251,42 @@ footer .menu li a {
   opacity: 0.5;
   text-decoration: none;
 }
-
-footer .menu li a:hover {
+.foo .foomenu li a:hover {
   opacity: 1;
 }
-
-footer p {
-  color: #e8e8e8;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 0.8em;
-  opacity: 0.8;
-}
-
-footer .wave {
+.foo .wave {
   position: absolute;
-  top: -1px;
+  top: -50%;
   left: 0;
   width: 100%;
   height: 100px;
   background: #30475e url(images/wave.png);
   background-size: 1000px 100px;
 }
-
-footer .wave#wave1 {
+.foo .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave1 3s linear infinite;
 }
-
-footer .wave#wave2 {
+.foo .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave2 3s linear infinite;
 }
-
-footer .wave#wave3 {
+.foo .wave#wave3 {
   z-index: 1000;
   opacity: 0.25;
   bottom: 15px;
   animation: animateWave1 2s linear infinite;
 }
-
-footer .wave#wave4 {
+.foo .wave#wave4 {
   z-index: 999;
   opacity: 0.75;
   bottom: 20px;
   animation: animateWave2 2s linear infinite;
 }
-
 @keyframes animateWave1 {
   0% {
     background-position-x: 1000px;
@@ -354,3 +303,12 @@ footer .wave#wave4 {
     background-position-x: 1000px;
   }
 }
+footer p {
+  color: #e8e8e8;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+/* ---------------------------------------------- END --------------------------------------------- */
