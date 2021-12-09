@@ -1,9 +1,9 @@
+/* ------------------------------------------- HTML Styles ------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
-
+/* ------------------------------------------- Body Styles ------------------------------------------- */
 body {
-  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -11,53 +11,41 @@ body {
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
-.navb {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 15px; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  background: transparent;
+/* ------------------------------------------ Navbar Styles ------------------------------------------ */
+.nav {
   display: flex;
+  place-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  background: #30475e;
 }
 
 .navigation {
-  width: 650px;
-  height: 80px;
+  width: 32rem;
   background: #3586ff;
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 1rem;~
 }
-
 .navigation img {
-  padding: 10px;
-  padding-left: 40px;
-  padding-right: 100px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  max-width: 75%;
-  max-height: 75%;
+  padding-left: 3%;
+  padding-right: 3%;
+  max-width: 25%;
+  max-height: 25%;
 }
-
 .navigation ul {
   display: flex;
-  width: 350px;
 }
-
 .navigation ul li {
-  padding-top: 15px;
+  padding-top: 0.8rem;
   position: relative;
   list-style: none;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   z-index: 2;
 }
-
 .navigation ul li a {
   text-decoration: none;
   position: relative;
@@ -70,22 +58,18 @@ body {
   font-weight: 500;
   color: #e8e8e8;
 }
-
 .navigation ul li a .icon {
   position: relative;
   display: block;
-  line-height: 60px;
   font-size: 2em;
   text-align: center;
   transition: 0.5s;
   color: #e8e8e8;
 }
-
 .navigation ul li.active a .icon {
   transform: translateY(-35px);
   color: #30475e;
 }
-
 .navigation ul li a .text {
   position: absolute;
   color: #30475e;
@@ -97,25 +81,20 @@ body {
   letter-spacing: 0.05em;
   transition: 0.5s;
   opacity: 0;
-  transform: translateY(10px);
 }
-
 .navigation ul li.active a .text {
   opacity: 1;
-  transform: translateY(10px);
   color: #e8e8e8;
 }
-
 .indicator {
   position: absolute;
-  top: 5%;
+  top: 1%;
   width: 60px;
   height: 60px;
   background: #3586ff;
   border-radius: 50%;
   transition: 0.5s;
 }
-
 .indicator::before {
   content: "";
   position: absolute;
@@ -123,7 +102,6 @@ body {
   left: -28px;
   width: 30px;
   height: 30px;
-  background: transparent;
   border-radius: 30px;
   box-shadow: 15px 18px #3586ff;
 }
@@ -134,28 +112,23 @@ body {
   right: -28px;
   width: 30px;
   height: 30px;
-  background: transparent;
   border-radius: 30px;
   box-shadow: -15px 18px #3586ff;
 }
-
 .navigation ul li:nth-child(1).active ~ .indicator {
   transform: translateX(calc(60px * 0));
 }
-
 .navigation ul li:nth-child(2).active ~ .indicator {
   transform: translateX(calc(61px * 1));
 }
-
 .navigation ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(62px * 2));
+  transform: translateX(calc(60px * 2));
 }
-
 .navigation ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(63px * 3));
+  transform: translateX(calc(60px * 3));
 }
 .navigation ul li:nth-child(5).active ~ .indicator {
-  transform: translateX(calc(62px * 4));
+  transform: translateX(calc(60px * 4));
 }
 
 .home {
@@ -356,7 +329,6 @@ footer .wave#wave4 {
 
 @media only screen and (max-width: 500) {
   body {
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 }
-
