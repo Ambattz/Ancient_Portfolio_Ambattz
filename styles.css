@@ -239,11 +239,7 @@ body {
   display: inline-block;
   transition: 0.5s;
 }
-@media only screen and (max-width: 600px) {
-  .foo .foolist li a {
-    font-size: 1.5em;
-  }
-}
+
 .foo .foolist li a:hover {
   transform: translateY(-15px);
 }
@@ -315,5 +311,15 @@ footer p {
   margin-bottom: 10px;
   font-size: 0.7em;
   opacity: 0.8;
+}
+@media only screen and (max-width: 600px) {
+  .foo .foolist li a {
+    font-size: 1.5em;
+    margin: 0 8px;
+  }
+  .foo .foomenu li a {
+    font-size: 0.75em;
+    margin: 0 8px;
+  }
 }
 /* ---------------------------------------------- END --------------------------------------------- */
