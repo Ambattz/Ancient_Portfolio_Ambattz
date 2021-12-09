@@ -239,6 +239,11 @@ body {
   display: inline-block;
   transition: 0.5s;
 }
+@media only screen and (max-width: 600px) {
+  .foo .foolist li a {
+    font-size: 1.5em;
+  }
+}
 .foo .foolist li a:hover {
   transform: translateY(-15px);
 }
