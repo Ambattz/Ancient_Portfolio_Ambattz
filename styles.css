@@ -22,8 +22,8 @@ body {
   padding-right: 2%;
   background: #30475e;
 }
-
 .navigation {
+  position: fixed;
   width: 35rem;
   background: #3586ff;
   display: flex;
@@ -32,11 +32,9 @@ body {
   border-radius: 2rem;
 }
 .navigation img {
-  /* padding-left: 3%;
-  padding-right: 3%; */
   padding-bottom: 3%;
-  max-width: 30%;
-  max-height: 30%;
+  max-width: 25%;
+  max-height: 25%;
 }
 .navigation ul {
   display: flex;
@@ -95,7 +93,7 @@ body {
 }
 .indicator {
   position: absolute;
-  top: 1%;
+  top: -22%;
   width: 80px;
   height: 80px;
   background: #3586ff;
@@ -117,13 +115,17 @@ body {
 .navigation ul li:nth-child(5).active ~ .indicator {
   transform: translateX(calc(80px * 4));
 }
-
 @media only screen and (max-width: 600px) {
   .navigation {
     width: 20rem;
   }
+  .navigation img {
+    padding-bottom: 3%;
+    max-width: 15%;
+    max-height: 15%;
+  }
   .indicator {
-    top: 2%;
+    top: -38%;
     width: 50px;
     height: 50px;
   }
@@ -150,10 +152,10 @@ body {
     transform: translateX(calc(50px * 4));
   }
   .navigation ul li a .text {
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 }
-
+/* ------------------------------------------- Home Styles ------------------------------------------- */
 .home {
   padding-top: 350px;
   padding-bottom: 350px;
@@ -174,7 +176,7 @@ body {
   line-height: 50px;
   letter-spacing: 5px;
 }
-
+/* ----------------------------------------- Profile Styles ----------------------------------------- */
 .profile {
   margin: 0%;
   display: flex;
@@ -197,9 +199,12 @@ body {
   max-width: 25%;
   max-height: 50%;
 }
+/* ----------------------------------------- Ability Styles ----------------------------------------- */
 .ability {
 }
+/* ----------------------------------------- Contact Styles ----------------------------------------- */
 
+/* ----------------------------------------- Footer Styles ----------------------------------------- */
 .footermsg {
   padding-top: 290px;
   margin: 0%;
