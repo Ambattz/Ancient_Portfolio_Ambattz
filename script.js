@@ -11,3 +11,7 @@ var typed = new Typed(".autotyper", {
   backSpeed: 100,
   loop: true,
 });
+
+ScrollOut({
+  targets:'h1'
+});
