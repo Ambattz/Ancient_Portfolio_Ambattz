@@ -17,8 +17,8 @@ body {
   display: flex;
   place-items: center;
   flex-direction: column;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 .navigation {
   position: fixed;
@@ -117,7 +117,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .navigation {
-    width: 20rem;
+    width: 80vw;
   }
   .navigation img {
     padding-bottom: 3%;
@@ -201,7 +201,7 @@ body {
   }
   .home h1 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 4rem;
     letter-spacing: 0.15rem;
   }
   .desc {
@@ -216,8 +216,10 @@ body {
   }
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
-
-
+#profile .container-fluid {
+  margin: 0%;
+  padding: 4%;
+}
 .profile {
   background: #30475e;
   color: #e8e8e8;
@@ -284,14 +286,14 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .profile h1 {
-    padding: 5%;
+    padding: 0%;
     padding-top: 25%;
     padding-bottom: 25%;
     max-height: 100%;
     background: #3586ff;
     color: #30475e;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     border-radius: 1rem;
     writing-mode: vertical-rl;
     text-orientation: upright;

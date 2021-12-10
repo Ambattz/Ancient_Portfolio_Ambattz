@@ -6,8 +6,9 @@ function activeLink() {
 list.forEach((item) => item.addEventListener("click", activeLink));
 
 var typed = new Typed(".autotyper", {
-  strings: ["Alvin Ambattu","an Engineer", "a Web Developer"],
+  strings: ["Alvin Ambattu", "an Engineer", "a Web Developer"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
+  cursorChar: "|",
 });
