@@ -13,5 +13,5 @@ var typed = new Typed(".autotyper", {
 });
 
 ScrollOut({
-  targets:'h1'
+  targets:'h1, .desc'
 });
