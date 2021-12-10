@@ -137,7 +137,7 @@ body {
   .indicator {
     top: -38%;
     width: 50px;
-    height: 25px;
+    height: 50px;
   }
   .navigation ul li:nth-child(1).active ~ .indicator {
     transform: translateX(calc(50px * 0));
@@ -217,44 +217,14 @@ body {
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
 
-@media only screen and (max-width: 600px) {
-  .profile {
-    padding-right: 8rem;
-    padding-left: 8rem;
-    padding-top: 15rem;
-    padding-bottom: 13rem;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .profile .profile-title {
-    padding: 2%;
-  }
-  .profile h1 {
-    padding: 2%;
-    /* height: 50%; */
-    background: #3586ff;
-    color: #30475e;
-    text-align: center;
-    font-size: 2rem;
-    border-radius: 1rem;
-    writing-mode: horizontal-tb;
-    text-orientation: upright;
-  }
-  .profile img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25%;
-  }
-}
+
 .profile {
   background: #30475e;
   color: #e8e8e8;
   padding-right: 8rem;
   padding-left: 8rem;
   padding-top: 15rem;
-  padding-bottom: 13rem;
+  padding-bottom: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,16 +233,24 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-.profile .profile-title {
+.titimg {
+  padding: 0%;
+  margin: 0%;
+}
+.profile-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0%;
+  margin: 0%;
   font-weight: 50%;
-  padding: 2%;
+  height: 100%;
 }
 .profile h1 {
-  padding: 2%;
-  height: 50%;
+  padding: 5%;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  max-height: 100%;
   background: #3586ff;
   color: #30475e;
   text-align: center;
@@ -281,11 +259,13 @@ body {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
-.profile .profile-desc {
+.profile-desc {
   margin: 0%;
   padding: 0%;
 }
-.profile .image {
+.image {
+  padding: 0%;
+  margin: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,12 +275,27 @@ body {
   max-height: 85%;
   border-radius: 25%;
 }
-.profile .desc {
-  padding-left: 2%;
+.desc {
+  padding-left: 3%;
   justify-content: center;
   text-align: justify;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
+}
+@media only screen and (max-width: 600px) {
+  .profile h1 {
+    padding: 5%;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    max-height: 100%;
+    background: #3586ff;
+    color: #30475e;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
 
