@@ -114,35 +114,32 @@ body {
   transform: translateX(calc(80px * 4));
 }
 @media only screen and (max-width: 600px) {
+
 }
 /* ------------------------------------------- Home Styles ------------------------------------------- */
 .home {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
   margin: 0%;
   padding: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: auto;
+  height: 100vh; 
   color: #4e9f3d;
   background: #041c32;
 }
 .home h1 {
-  padding-top: 10%;
-  font-size: 4rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  line-height: 4rem;
-  letter-spacing: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.25rem;
+
 }
-.autotyper {
+.home .autotyper {
   color: #ecb365;
 }
 .home .desc {
@@ -151,30 +148,20 @@ body {
   justify-content: center;
   align-items: center;
 }
-.stressed {
+.home .stressed {
   font-size: x-large;
   color: #ecb365;
 }
-@media only screen and (max-width: 600px) {
-  .home {
-    width: 100vw;
-    height: 100vh;
-    margin: 0%;
-  }
+@media only screen and (max-width: 750px) {
   .home h1 {
-    font-size: 1.5rem;
-    line-height: 4rem;
+    font-size: 2rem;
     letter-spacing: 0.15rem;
   }
-  .desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-small;
-  }
-  .stressed {
+  .home .desc {
     font-size: small;
-    color: #ecb365;
+  }
+  .home .stressed {
+    font-size: large;
   }
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
