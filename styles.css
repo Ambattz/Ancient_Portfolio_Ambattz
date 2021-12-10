@@ -300,10 +300,6 @@ body {
   }
   .desc {
     padding: 10%;
-    justify-content: center;
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
   }
 }
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
