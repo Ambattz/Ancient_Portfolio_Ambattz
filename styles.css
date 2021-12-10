@@ -220,10 +220,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
 }
-@media only screen and (max-width:950px) {
+@media only screen and (max-width: 950px) {
   .profile {
     padding-right: 2rem;
     padding-left: 2rem;
+    padding-top: 10%;
     width: auto;
     height: 100vh;
   }
@@ -234,8 +235,8 @@ body {
     border-radius: 1rem;
   }
   .profile img {
-    width: 70%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
   }
   .profile .desc {
     padding: 0%;
