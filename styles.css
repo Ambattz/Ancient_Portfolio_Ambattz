@@ -23,8 +23,7 @@ body {
 .navigation {
   position: fixed;
   top: 8%;
-  width: 35rem;
-  background: #3586ff;
+  background: #ecb365;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,10 +33,10 @@ body {
   transition: 0.5s;
 }
 .navigation img {
-  padding-top: 2%;
-  padding-bottom: 3%;
-  max-width: 25%;
-  max-height: 25%;
+  padding-top: 2.5%;
+  padding-bottom: 2%;
+  max-width: 20%;
+  max-height: 20%;
 }
 .navigation ul {
   display: flex;
@@ -61,42 +60,41 @@ body {
   width: 100%;
   text-align: 100%;
   font-weight: 500;
-  color: #e8e8e8;
+  color: #064663;
 }
 .navigation ul li a .icon {
   position: relative;
   display: block;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   transition: 0.5s;
-  color: #e8e8e8;
+  color: #064663;
 }
 .navigation ul li.active a .icon {
   transform: translateY(-35px);
-  color: #30475e;
+  color: #4e9f3d;
 }
 .navigation ul li a .text {
   position: absolute;
-  color: #30475e;
+  color: #041c32;
   padding: 5px 7px;
   border-radius: 12px;
-  background: #30475e;
+  background: #4e9f3d;
   font-weight: 400;
-  font-size: 0.75em;
+  font-size: 0.85em;
   letter-spacing: 0.05em;
   transition: 0.5s;
   opacity: 0;
 }
 .navigation ul li.active a .text {
   opacity: 1;
-  color: #e8e8e8;
 }
 .indicator {
   position: absolute;
-  top: -22%;
+  top: -30%;
   width: 80px;
   height: 80px;
-  background: #3586ff;
+  background: #ecb365;
   border-radius: 25%;
   transition: 0.5s;
 }
@@ -167,10 +165,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #e8e8e8;
-  background: #30475e;
+  color: #4e9f3d;
+  background: #041c32;
 }
 .home h1 {
+  padding-top: 10%;
   font-size: 4rem;
   font-style: normal;
   font-variant: normal;
@@ -182,16 +181,17 @@ body {
   align-items: center;
 }
 .autotyper {
-  color: #3586ff;
+  color: #ecb365;
 }
-.desc {
+.home .desc {
+  padding: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .stressed {
   font-size: x-large;
-  color: #3586ff;
+  color: #ecb365;
 }
 @media only screen and (max-width: 600px) {
   .home {
@@ -212,7 +212,7 @@ body {
   }
   .stressed {
     font-size: small;
-    color: #3586ff;
+    color: #ecb365;
   }
 }
 /* ----------------------------------------- Profile Styles ----------------------------------------- */
@@ -221,8 +221,8 @@ body {
   padding: 4%;
 }
 .profile {
-  background: #30475e;
-  color: #e8e8e8;
+  background: #041c32;
+  color: #4e9f3d;
   padding-right: 8rem;
   padding-left: 8rem;
   padding-top: 15rem;
@@ -241,20 +241,18 @@ body {
 }
 .profile-title {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   padding: 0%;
   margin: 0%;
   font-weight: 50%;
-  height: 100%;
 }
-.profile h1 {
-  padding: 5%;
-  padding-top: 25%;
-  padding-bottom: 25%;
+
+.profile-title h1 {
   max-height: 100%;
-  background: #3586ff;
-  color: #30475e;
+  padding: 2%;
+  background: #4e9f3d;
+  color: #041c32;
   text-align: center;
   font-size: 2rem;
   border-radius: 1rem;
@@ -273,39 +271,80 @@ body {
   align-items: center;
 }
 .profile img {
-  max-width: 85%;
-  max-height: 85%;
+  max-width: 75%;
+  max-height: 75%;
   border-radius: 25%;
 }
-.desc {
-  padding-left: 3%;
+.profile .desc {
+  padding: 10%;
   justify-content: center;
   text-align: justify;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .profile h1 {
     padding: 0%;
     padding-top: 25%;
     padding-bottom: 25%;
     max-height: 100%;
-    background: #3586ff;
-    color: #30475e;
+    background: #ecb365;
+    color: #041c32;
     text-align: center;
     font-size: 1.5rem;
     border-radius: 1rem;
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
-  .desc {
-    padding: 10%;
-  }
 }
+/* ----------------------------------------- career Styles ----------------------------------------- */
+.career {
+  background: #041c32;
+  color: #950101;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
-
+.ability {
+  background: #041c32;
+  color: #950101;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
-
+.contact {
+  background: #041c32;
+  color: #950101;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  max-width: 100%;
+}
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
 .foo {
   display: flex;
@@ -313,7 +352,7 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
-  background: #3586ff;
+  background: #ecb365;
   padding: 10px 25px;
   flex-direction: column;
 }
@@ -336,7 +375,7 @@ body {
 }
 .foo .foolist li a {
   font-size: 2em;
-  color: #e8e8e8;
+  color: #064663;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -344,10 +383,11 @@ body {
 
 .foo .foolist li a:hover {
   transform: translateY(-15px);
+  color: #4e9f3d;
 }
 .foo .foomenu li a {
   font-size: 1em;
-  color: #e8e8e8;
+  color: #064663;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -356,6 +396,7 @@ body {
 }
 .foo .foomenu li a:hover {
   opacity: 1;
+  color: #4e9f3d;
 }
 .foo .wave {
   position: absolute;
@@ -363,7 +404,7 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: #30475e url(images/wave.png);
+  background: #041c32 url(images/wave.png);
   background-size: 1000px 100px;
 }
 .foo .wave#wave1 {
@@ -407,7 +448,7 @@ body {
   }
 }
 footer p {
-  color: #e8e8e8;
+  color: #064663;
   text-align: center;
   margin-top: 10px;
   font-size: 0.7em;

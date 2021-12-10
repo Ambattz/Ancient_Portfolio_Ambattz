@@ -10,5 +10,4 @@ var typed = new Typed(".autotyper", {
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
-  cursorChar: "|",
 });
