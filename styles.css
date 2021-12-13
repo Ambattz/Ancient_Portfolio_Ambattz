@@ -301,19 +301,82 @@ body {
 }
 
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
+
 .ability {
   margin: 0%;
   padding: 0%;
+  padding-top: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background: #041c32;
   color: #4e9f3d;
   padding-right: 8rem;
   padding-left: 8rem;
   width: auto;
   height: 100vh;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+.ability .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ability .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 350px;
+  height: 300px;
+  margin: 5%;
+  background: #064663;
+  border-radius: 15%;
+}
+
+.ability .box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #041c32;
+  transition: 0.5s;
+  border-radius: 15%;
+  z-index: 2;
+}
+.ability .box:hover .icon {
+  top: 30px;
+  background: #ecb365;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.ability .box .icon ion-icon {
+  font-size: 5em;
+  color: #4e9f3d;
+}
+.ability .box:hover .icon ion-icon {
+  font-size: 2.5em;
+  color: #064663;
+}
+
+.ability .box .content {
+  position: relative;
+  padding: 20px;
+  color: #ecb365;
+  text-align: center;
+  margin-top: 80px;
+  z-index: 1;
+}
+
 .ability .title {
   display: flex;
   justify-content: center;
@@ -321,21 +384,25 @@ body {
   font-weight: 100%;
 }
 .ability .title h1 {
+  padding: 0%;
+  margin: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
-  background: #4e9f3d;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  background: #ecb365;
   color: #041c32;
   font-size: 2.5rem;
   border-radius: 1rem;
   transition: 0.5s;
-  transform-origin: left;
-  transform: scaleX(0);
+  transform-origin: top;
+  transform: scaleY(0);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 .ability .title h1[data-scroll="in"] {
-  transform: scaleX(1);
+  transform: scaleY(1);
   position: relative;
   z-index: 0;
 }
@@ -346,13 +413,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ecb365;
+  background: #4e9f3d;
   border-radius: 1rem;
   transition: 0.5s;
-  transform-origin: left;
+  transform-origin: top;
 }
 .ability .title h1[data-scroll="in"]:before {
-  transform: scaleX(0);
+  transform: scaleY(0);
   transition-delay: 0.5s;
 }
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
