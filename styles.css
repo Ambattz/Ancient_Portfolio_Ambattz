@@ -270,6 +270,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .profile {
+    padding: 0%;
     padding-right: 2rem;
     padding-left: 2rem;
   }
@@ -294,7 +295,7 @@ body {
 .ability {
   margin: 0%;
   padding: 0%;
-  padding-top: 100px;
+  padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,7 +314,7 @@ body {
 .ability .row {
   --bs-gutter-x: 0 rem;
   padding: 0%;
-  padding-top: 3%;
+  /* padding-top: 3%; */
   margin: 0%;
   display: flex;
   justify-content: center;
