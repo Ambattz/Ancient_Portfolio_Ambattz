@@ -302,8 +302,8 @@ body {
   position: relative;
   background: #041c32;
   color: #4e9f3d;
-  padding-right: 6rem;
-  padding-left: 6rem;
+  /* padding-right: 6rem;
+  padding-left: 6rem; */
   width: auto;
   height: 100vh;
   /* gap: 20px; */
@@ -338,14 +338,14 @@ body {
   content: "";
   position: absolute;
   width: 150px;
-  height: 150%;
+  height: 200%;
   background: linear-gradient(#ecb365, #4e9f3d);
   animation: animate 4s linear infinite;
 }
 .ability .box::after {
   content: "";
   position: absolute;
-  inset: 4px;
+  inset: 6px;
   background: #041c32;
   border-radius: 15px;
 }
@@ -416,16 +416,21 @@ body {
   line-height: 1.5em;
 }
 @media only screen and (max-width: 1000px) {
-  .ability {
-    padding-top: 150px;
+  .ability{
+    padding-right:0rem;
+    padding-left: 0rem;
+  }
+  .ability .row{
+    padding: 1%;
   }
   .ability .box {
-    width: 225px;
-    height: 163px;
-    margin: 1%;
+    transition: 0.5s;
+    height: 200px;
+    width: 200px;
+    margin: 2%;
   }
   .ability .box:hover .icon {
-    top: 10px;
+    top: 15px;
     left: calc(50% - 15px);
     width: 30px;
     height: 30px;
@@ -434,17 +439,20 @@ body {
     font-size: 1em;
   }
   .ability .box .content {
+    transition: 0.5s;
+
     margin-top: 40px;
   }
   .ability .box:hover .content {
-    padding: 5px;
+    transition: 0.5s;
+    padding: 15px;
   }
   .ability .box .content h2 {
     font-size: 1rem;
   }
   .ability .box .content p {
     font-size: 0.7rem;
-    line-height: 1;
+    line-height: 1.5;
   }
 }
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
@@ -703,7 +711,6 @@ textarea:focus {
     transform: translateY(-8rem) scale(0.3, 0.5);
   }
 }
-
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
 .foo {
   display: flex;
