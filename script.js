@@ -24,5 +24,4 @@ const components = document.querySelectorAll(".contact");
 function addClass() {
   components.forEach((item) => item.classList.add("sent"));
 }
-
 sendLetter.addEventListener("click", addClass);

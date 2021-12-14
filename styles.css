@@ -280,22 +280,6 @@ body {
     transform: translateX(0);
   }
 }
-/* ----------------------------------------- career Styles ----------------------------------------- */
-.career {
-  background: #041c32;
-  color: #950101;
-  padding-right: 8rem;
-  padding-left: 8rem;
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
-}
 /* ----------------------------------------- Ability Styles ----------------------------------------- */
 .ability {
   margin: 0%;
@@ -317,6 +301,7 @@ body {
   overflow-x: hidden;
 }
 .ability .row {
+  --bs-gutter-x: 0 rem;
   padding: 0%;
   margin: 0%;
   display: flex;
@@ -383,7 +368,6 @@ body {
   border-radius: 50%;
   /* transition-delay: 0s; */
 }
-
 .ability .box .icon ion-icon {
   font-size: 5em;
   color: #4e9f3d;
@@ -394,7 +378,6 @@ body {
   color: #064663;
   /* transition-delay: 0s; */
 }
-
 .ability .box .content {
   display: flex;
   flex-direction: column;
@@ -407,7 +390,6 @@ body {
   transition: 0.05s;
   /* transition-delay: 0s; */
 }
-
 .ability .box:hover .content {
   display: flex;
   flex-direction: column;
@@ -468,36 +450,33 @@ body {
   transition-delay: 0.5s;
 }
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
-@use postcss-nested;
 .contact {
   margin: 0;
   padding: 0;
-  padding-bottom: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
   height: 85vh;
-  max-width: 100%;
   background-color: #041c32;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cursive;
   color: #ecb365;
   text-align: center;
 }
 h1,
 p {
   margin: 0;
-  padding: 2px;
+  padding: 1px;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  padding-bottom: 1%;
 }
 textarea,
 input,
 button {
   line-height: 1.5rem;
-  border: 0;
   outline: none;
   appearance: none;
 }
@@ -510,16 +489,16 @@ input {
 }
 textarea {
   width: 100%;
-  height: 8rem;
+  height: 7rem;
   resize: none;
 }
 input {
   width: 50%;
   margin-bottom: 1rem;
-  &[type="text"]:invalid,
-  [type="email"]:invalid {
-    box-shadow: none;
-  }
+}
+input[type="text"]:invalid,
+input[type="email"]:invalid {
+  box-shadow: none;
 }
 button {
   padding: 0.5rem 1rem;
@@ -543,15 +522,16 @@ textarea:focus {
   outline: none;
 }
 .letter {
-  top: 13rem;
+  padding-top: 10px;
   position: absolute;
   left: 0;
   right: 0;
-  width: 50rem;
+  top: 0;
+  width: 30rem;
   margin: auto;
+  perspective: 60rem;
 }
 .side {
-  position: relative;
   height: 14rem;
   background-color: #041c32;
   outline: 1px solid transparent;
@@ -564,19 +544,20 @@ textarea:focus {
 .side:nth-of-type(2) {
   padding: 2rem;
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem #ecb365;
+  box-shadow: 0 0.3rem 0.3rem #041c32, inset 0 -0.57rem 2rem #ecb365;
   text-align: right;
 }
+
 .envelope {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 40px;
   margin: auto;
 }
 .envelope.front {
-  width: 10rem;
-  height: 6rem;
+  width: 11rem;
+  height: 7rem;
   border-radius: 0 0 1rem 1rem;
   overflow: hidden;
   z-index: 9999;
@@ -586,12 +567,12 @@ textarea:focus {
 .envelope.front::after {
   position: absolute;
   display: block;
-  width: 12rem;
+  width: 13rem;
   height: 6rem;
   background-color: #e9dc9d;
   transform: rotate(30deg);
   transform-origin: 0 0;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem #041c32;
   content: "";
 }
 .envelope.front::after {
@@ -600,11 +581,13 @@ textarea:focus {
   transform-origin: 100% 0;
 }
 .envelope.back {
-  top: -4rem;
-  width: 10rem;
+  display: flex;
+  justify-content: center;
+  top: -2rem;
+  width: 11rem;
   height: 10rem;
   overflow: hidden;
-  z-index: -9998;
+  z-index: 9997;
   opacity: 0;
   transform: translateY(-6rem);
 }
@@ -612,49 +595,48 @@ textarea:focus {
   display: block;
   width: 10rem;
   height: 10rem;
-  background-color: ##ecb365;
+  background-color: #e9dc9d;
   border-radius: 1rem;
   content: "";
   transform: scaleY(0.6) rotate(45deg);
 }
 .result-message {
+  /* position: absolute; */
+  color: #ecb365;
   opacity: 0;
   transition: all 0.3s 2s;
   transform: translateY(9rem);
   z-index: -9999;
 }
-.sent {
-  .sent .letter {
-    animation: scaleLetter 1s forwards ease-in,
-      pushLetter 0.5s 1.33s forwards ease-out;
-  }
-  .sent .side:nth-of-type(1) {
-    transform-origin: 0 100%;
-    animation: closeLetter 0.66s forwards ease-in;
-  }
-  .sent .side:nth-of-type(1) h1,
-  .side:nth-of-type(1) textarea {
-    animation: fadeOutText 0.66s forwards linear;
-  }
-  .sent button {
-    background-color: rgba(78, 94, 114, 0.2);
-  }
-  .sent .envelope {
-    animation: fadeInEnvelope 0.5s 1.33s forwards ease-out;
-  }
-  .sent .result-message {
-    opacity: 1;
-    transform: translateY(12rem);
-  }
-  .sent small {
-    opacity: 0;
-  }
+.sent .letter {
+  animation: scaleLetter 1s forwards ease-in,
+    pushLetter 0.5s 1.33s forwards ease-out;
+    z-index: 9998;
+
+}
+.sent .side:nth-of-type(1) {
+  transform-origin: 0 100%;
+  animation: closeLetter 0.66s forwards ease-in;
+}
+.sent .side:nth-of-type(1) h1,
+.sent .side:nth-of-type(1) textarea {
+  animation: fadeOutText 0.66s forwards linear;
+}
+.sent button {
+  background-color: #041c32;
+}
+.sent .envelope {
+  animation: fadeInEnvelope 0.5s 1.33s forwards ease-out;
+}
+.sent .result-message {
+  z-index: 9999;
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(18rem);
 }
 .centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 150px;
+  position: absolute;
+  top: 180px;
   left: 0;
   right: 0;
   margin: 1rem auto;
@@ -665,6 +647,7 @@ textarea:focus {
   }
   100% {
     transform: rotateX(-180deg);
+    background-color: #ecb365;
   }
 }
 @keyframes fadeOutText {
@@ -683,7 +666,10 @@ textarea:focus {
     opacity: 0;
     transform: translateY(8rem);
   }
-  /*90% {opacity: 1; transform: translateY(4rem);}*/
+  90% {
+    opacity: 1;
+    transform: translateY(4rem);
+  }
   100% {
     opacity: 1;
     transform: translateY(4.5rem);
