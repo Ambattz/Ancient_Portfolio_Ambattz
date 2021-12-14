@@ -1,7 +1,7 @@
 /* ------------------------------------------- HTML Styles ------------------------------------------- */
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 /* ------------------------------------------- Body Styles ------------------------------------------- */
 body {
@@ -21,7 +21,7 @@ body {
 }
 .navigation {
   position: fixed;
-  top: 6%;
+  top: 3rem;
   background: #ecb365;
   display: flex;
   flex-direction: column;
@@ -167,16 +167,16 @@ body {
 .profile {
   margin: 0%;
   padding: 0%;
-  padding-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #041c32;
   color: #4e9f3d;
-  padding-right: 6rem;
-  padding-left: 6rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
   width: auto;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 7rem;
   z-index: 1;
 }
 .profile .row {
@@ -295,41 +295,36 @@ body {
 .ability {
   margin: 0%;
   padding: 0%;
-  padding-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background: #041c32;
   color: #4e9f3d;
-  /* padding-right: 6rem;
-  padding-left: 6rem; */
   width: auto;
-  height: 100vh;
-  /* gap: 20px; */
+  min-height: 100vh;
+  padding-top: 7rem;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow-y: visible;
   overflow-x: hidden;
 }
 .ability .row {
-  --bs-gutter-x: 0 rem;
-  padding: 0%;
-  /* padding-top: 3%; */
-  margin: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
+  --bs-gutter-x: 0 rem;
+  padding: 0%;
   box-sizing: border-box;
+  margin: 0%;
 }
 .ability .box {
-  /* padding-top: 10%; */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 350px;
   height: 300px;
-  margin: 2%;
+  margin: 1%;
   background: #064663;
   border-radius: 20px;
   overflow: hidden;
@@ -394,17 +389,20 @@ body {
   flex-direction: column;
   position: relative;
   color: #ecb365;
-  text-align: center;
+  text-align: justify;
   margin-top: 100px;
   z-index: 1;
   transform: scale(0);
   transition: 0.05s;
   /* transition-delay: 0s; */
 }
+.ability .box h2 {
+  text-align: center;
+}
 .ability .box:hover .content {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   transform: scale(1);
   /* transition-delay: 0.25s; */
 }
@@ -416,11 +414,11 @@ body {
   line-height: 1.5em;
 }
 @media only screen and (max-width: 1000px) {
-  .ability{
-    padding-right:0rem;
+  .ability {
+    padding-right: 0rem;
     padding-left: 0rem;
   }
-  .ability .row{
+  .ability .row {
     padding: 1%;
   }
   .ability .box {
@@ -464,7 +462,7 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 75vh;
   background-color: #041c32;
   font-family: cursive;
   color: #ecb365;
@@ -553,7 +551,6 @@ textarea:focus {
   box-shadow: 0 0.3rem 0.3rem #041c32, inset 0 -0.57rem 2rem #ecb365;
   text-align: right;
 }
-
 .envelope {
   position: absolute;
   left: 0;
@@ -718,6 +715,7 @@ textarea:focus {
   align-items: center;
   position: absolute;
   width: 100%;
+  height: 15vh;
   background: #ecb365;
   padding: 10px 25px;
   flex-direction: column;
@@ -731,9 +729,6 @@ textarea:focus {
   margin: 0%;
   flex-wrap: wrap;
   padding: 0%;
-}
-.iconlist {
-  padding-top: 30px;
 }
 .foo .foolist li,
 .foo .foomenu li {
@@ -765,10 +760,10 @@ textarea:focus {
 }
 .foo .wave {
   position: absolute;
-  top: -40%;
+  top: -5em;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 10vh;
   background: #041c32 url(images/wave.png);
   background-size: 1000px 100px;
 }
@@ -816,7 +811,7 @@ footer p {
   padding: 0%;
   color: #064663;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 0.7em;
   opacity: 0.8;
 }
@@ -846,9 +841,9 @@ footer p {
   scrollbar-color: #00c851 #ecb365;
 }
 .scrollbar-success::-webkit-scrollbar-track-piece:end {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .scrollbar-success::-webkit-scrollbar-track-piece:start {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 /* ---------------------------------------------- END --------------------------------------------- */
