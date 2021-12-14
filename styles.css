@@ -1,7 +1,7 @@
 /* ------------------------------------------- HTML Styles ------------------------------------------- */
 html {
   scroll-behavior: smooth;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 /* ------------------------------------------- Body Styles ------------------------------------------- */
 body {
@@ -465,11 +465,11 @@ body {
 h1,
 p {
   margin: 0;
-  padding: 1px;
+  padding: 0.1em;
 }
 h1 {
   font-size: 2.5rem;
-  padding-bottom: 1%;
+  padding-bottom: 0.1em;
 }
 textarea,
 input,
@@ -520,12 +520,12 @@ textarea:focus {
   outline: none;
 }
 .letter {
-  padding-top: 10px;
+  /* padding-top: 0.5rem; */
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  width: 30rem;
+  width: 25rem;
   margin: auto;
   perspective: 60rem;
 }
@@ -633,7 +633,7 @@ textarea:focus {
 }
 .centered {
   position: absolute;
-  top: 180px;
+  top: 150px;
   left: 0;
   right: 0;
   margin: 1rem auto;
