@@ -30,7 +30,7 @@ body {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   transition: 0.5s;
-  z-index: 10;
+  z-index: 9999;
 }
 .navigation img {
   padding-top: 2.5%;
@@ -111,6 +111,11 @@ body {
 }
 .navigation ul li:nth-child(4).active ~ .indicator {
   transform: translateX(calc(80px * 3));
+}
+@media only screen and (max-width: 750px) {
+  .navigation ul li a .icon {
+    font-size: 2em;
+  }
 }
 /* ------------------------------------------- Home Styles ------------------------------------------- */
 .home {
@@ -277,7 +282,7 @@ body {
   }
   .profile img {
     width: 50%;
-    height:90%;
+    height: 90%;
   }
   .profile .title {
     padding-top: 2%;
@@ -307,14 +312,14 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: #041c32;
-  color: #4e9f3d;
   width: auto;
   min-height: 100vh;
-  padding-top: 7rem;
+  padding-top: 6rem;
   flex-wrap: wrap;
   overflow-y: visible;
   overflow-x: hidden;
+  background: #041c32;
+  color: #4e9f3d;
 }
 .ability .row {
   display: flex;
@@ -369,7 +374,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #041c32;
+  background: #064663;
   transition: 0.5s;
   z-index: 2;
 }
@@ -423,7 +428,7 @@ body {
 }
 @media only screen and (max-width: 1000px) {
   .ability {
-    padding-top: 5rem;
+    padding-top: 6rem;
     padding-right: 0rem;
     padding-left: 0rem;
   }
@@ -465,25 +470,26 @@ body {
 }
 /* ----------------------------------------- Contact Styles ----------------------------------------- */
 .contact {
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
-  /* height: 75vh; */
-  min-height: 85vh;
-  /* padding-top: 0rem; */
+  width: auto;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  overflow-y: visible;
+  overflow-x: hidden;
   background-color: #041c32;
-  font-family: cursive;
+  font-family: monospace;
   color: #ecb365;
   text-align: center;
 }
 h1,
 p {
   margin: 0;
-  padding: 0.1em;
+  padding: 0.1rem;
 }
 h1 {
   font-size: 2.5rem;
@@ -510,7 +516,7 @@ textarea {
 }
 input {
   width: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 input[type="text"]:invalid,
 input[type="email"]:invalid {
@@ -537,52 +543,60 @@ textarea:focus {
   background-color: #ecb365;
   outline: none;
 }
-.letter {
-  /* padding-top: 0.5rem; */
+.centered {
+  display: flex;
+  justify-content: center;
   position: absolute;
+  top: 9rem;
   left: 0;
   right: 0;
-  top: 0;
-  width: 25rem;
-  margin: auto;
+  margin: 2%;
+}
+.letter {
+  position: absolute;
+  width: 30rem;
+  margin: 0%;
   perspective: 60rem;
 }
 .side {
-  height: 14rem;
+  height: 15rem;
   background-color: #041c32;
   outline: 1px solid transparent;
 }
 .side:nth-of-type(1) {
   padding: 2rem 2rem 0;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: inset 0 0.75rem 2rem #ecb365;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: inset 0 1rem 3rem #064663;
 }
 .side:nth-of-type(2) {
   padding: 2rem;
-  border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 0.3rem 0.3rem #041c32, inset 0 -0.57rem 2rem #ecb365;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 0.1rem 0.1rem #041c32, inset 0 -1rem 3rem #064663;
   text-align: right;
 }
 .envelope {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
   right: 0;
-  top: 40px;
+  top: 2rem;
   margin: auto;
 }
 .envelope.front {
-  width: 11rem;
-  height: 7rem;
+  width: 10rem;
+  height: 8rem;
   border-radius: 0 0 1rem 1rem;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 9998;
   opacity: 0;
 }
 .envelope.front::before,
 .envelope.front::after {
   position: absolute;
   display: block;
-  width: 13rem;
+  width: 12rem;
   height: 6rem;
   background-color: #e9dc9d;
   transform: rotate(30deg);
@@ -596,10 +610,8 @@ textarea:focus {
   transform-origin: 100% 0;
 }
 .envelope.back {
-  display: flex;
-  justify-content: center;
-  top: -2rem;
-  width: 11rem;
+  top: -1rem;
+  width: 10rem;
   height: 10rem;
   overflow: hidden;
   z-index: 9997;
@@ -607,8 +619,10 @@ textarea:focus {
   transform: translateY(-6rem);
 }
 .envelope.back::before {
-  display: block;
-  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
   height: 10rem;
   background-color: #e9dc9d;
   border-radius: 1rem;
@@ -616,11 +630,10 @@ textarea:focus {
   transform: scaleY(0.6) rotate(45deg);
 }
 .result-message {
-  /* position: absolute; */
+  position: absolute;
   color: #ecb365;
   opacity: 0;
   transition: all 0.3s 2s;
-  transform: translateY(9rem);
   z-index: -9999;
 }
 .sent .letter {
@@ -629,6 +642,7 @@ textarea:focus {
   z-index: 9998;
 }
 .sent .side:nth-of-type(1) {
+  margin-top: 0%;
   transform-origin: 0 100%;
   animation: closeLetter 0.66s forwards ease-in;
 }
@@ -646,14 +660,7 @@ textarea:focus {
   z-index: 9999;
   opacity: 1;
   transition: 1s;
-  transform: translateY(18rem);
-}
-.centered {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
-  margin: 1rem auto;
+  transform: translateY(10rem);
 }
 @keyframes closeLetter {
   50% {
@@ -720,17 +727,35 @@ textarea:focus {
     transform: translateY(-8rem) scale(0.3, 0.5);
   }
 }
+@media only screen and (max-width: 1000px) {
+  .side {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0%;
+  }
+  .side:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  .letter {
+    position: absolute;
+    width: 25rem;
+    perspective: 60rem;
+  }
+}
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
 .foo {
+  padding: 0%;
+  margin: 0%;
+  left: 0%;
+  right: 0%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: 100%;
-  height: 15vh;
   background: #ecb365;
-  padding: 10px 25px;
-  flex-direction: column;
+  padding: 1.2em 0em 1em 0em;
 }
 .foo .foolist,
 .foo .foomenu {
@@ -772,10 +797,9 @@ textarea:focus {
 }
 .foo .wave {
   position: absolute;
-  top: -5em;
+  /* top: -5em; */
   left: 0;
-  width: 100%;
-  height: 10vh;
+  width: 100vh;
   background: #041c32 url(images/wave.png);
   background-size: 1000px 100px;
 }
@@ -823,7 +847,7 @@ footer p {
   padding: 0%;
   color: #064663;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 0.7em;
   opacity: 0.8;
 }
