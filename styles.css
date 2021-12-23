@@ -641,30 +641,30 @@ textarea:focus {
 }
 .sent .letter {
   top: 5rem;
-  animation: scaleLetter 1s forwards ease-in,
-    pushLetter 0.5s 1.33s forwards ease-out;
+  animation: scaleLetter 0.5s forwards ease-in,
+    pushLetter 0.3s 0.66s forwards ease-out;
   z-index: 9998;
 }
 .sent .side:nth-of-type(1) {
   margin-top: 0%;
 
   transform-origin: 0 100%;
-  animation: closeLetter 0.66s forwards ease-in;
+  animation: closeLetter 0.50s forwards ease-in;
 }
 .sent .side:nth-of-type(1) h1,
 .sent .side:nth-of-type(1) textarea {
-  animation: fadeOutText 0.66s forwards linear;
+  animation: fadeOutText 0.50s forwards linear;
 }
 .sent button {
   background-color: #041c32;
 }
 .sent .envelope {
-  animation: fadeInEnvelope 0.5s 1.33s forwards ease-out;
+  animation: fadeInEnvelope 0.3s 1.66s forwards ease-out;
 }
 .sent .result-message {
   z-index: 9999;
   opacity: 1;
-  transition: 2s;
+  transition: 0.5s;
   transform: translateY(12rem);
 }
 @keyframes closeLetter {

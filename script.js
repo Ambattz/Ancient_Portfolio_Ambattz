@@ -25,6 +25,6 @@ function addClass() {
   components.forEach((item) => item.classList.add("sent"));
   setTimeout(function () {
     window.location.reload();
-  }, 1900);
+  }, 1500);
 }
 sendLetter.addEventListener("click", addClass);
