@@ -23,5 +23,8 @@ ScrollOut({
 const components = document.querySelectorAll(".contact");
 function addClass() {
   components.forEach((item) => item.classList.add("sent"));
+  setTimeout(function () {
+    window.location.reload();
+  }, 1900);
 }
 sendLetter.addEventListener("click", addClass);

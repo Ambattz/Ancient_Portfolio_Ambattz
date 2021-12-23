@@ -167,25 +167,27 @@
     <section id="contact">
         <div class=" contact">
             <div class=" centered">
-                <article class="letter">
+                <form id="form" method="POST" 
+                    action="https://script.google.com/macros/s/AKfycbzMWT-jCzbJna8rb3bT1AHuF3Jp0h20kRF_D_qFt0-S-mqdcMxiIiu-u7OCOiaGl0dx/exec"
+                    class="letter">
                     <div class="side">
                         <h1>Contact me</h1>
                         <p>
-                            <textarea placeholder="Your message"></textarea>
+                            <textarea name="message" placeholder="Your message"></textarea>
                         </p>
                     </div>
                     <div class="side">
                         <p>
-                            <input type="text" placeholder="Your name">
+                            <input name="name" type="text" placeholder="Your name">
                         </p>
                         <p>
-                            <input type="email" placeholder="Your email">
+                            <input name="email" type="email" placeholder="Your email">
                         </p>
                         <p>
-                            <button id="sendLetter">Send</button>
+                            <button id="sendLetter" type="submit">Send</button>
                         </p>
                     </div>
-                </article>
+                </form>
                 <div class="envelope front"></div>
                 <div class="envelope back"></div>
                 <p class="result-message centered">Thank you</p>
