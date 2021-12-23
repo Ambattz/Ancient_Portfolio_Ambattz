@@ -321,6 +321,7 @@ body {
   background: #041c32;
   color: #4e9f3d;
 }
+
 .ability .row {
   display: flex;
   justify-content: center;
@@ -472,28 +473,59 @@ body {
 .contact {
   margin: 0%;
   padding: 0%;
+  overflow-y: visible;
+  /* overflow-x: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #041c32;
+  width: auto;
+}
+.centered {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: auto;
-  min-height: 100vh;
-  flex-wrap: wrap;
-  overflow-y: visible;
-  overflow-x: hidden;
-  background-color: #041c32;
-  font-family: monospace;
+  left: 0;
+  right: 0;
+  margin: 1%;
+}
+.letter {
+  position: absolute;
+  width: 30rem;
+  margin: 0%;
   color: #ecb365;
+  font-family: monospace;
   text-align: center;
+  perspective: 60rem;
+  z-index: 9999;
+}
+.side {
+  height: 10rem;
+  background-color: #041c32;
+  outline: 1px solid transparent;
+}
+.side:nth-of-type(1) {
+  padding: 2rem 2rem 0;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: inset 0 1rem 3rem #064663;
+}
+.side:nth-of-type(2) {
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 0.1rem 0.1rem #041c32, inset 0 -1rem 3rem #064663;
+  text-align: right;
 }
 h1,
 p {
   margin: 0;
-  padding: 0.1rem;
+  padding: 0rem;
 }
 h1 {
   font-size: 2.5rem;
-  padding-bottom: 0.1em;
+  padding-bottom: 0em;
 }
 textarea,
 input,
@@ -511,7 +543,7 @@ input {
 }
 textarea {
   width: 100%;
-  height: 7rem;
+  height: 5rem;
   resize: none;
 }
 input {
@@ -523,12 +555,13 @@ input[type="email"]:invalid {
   box-shadow: none;
 }
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   border-radius: 0.25rem;
   color: #ecb365;
   background-color: #064663;
   font-size: 1rem;
   transition: background-color 0.2s;
+  border-radius: 10px;
 }
 button:hover,
 button:focus {
@@ -543,48 +576,18 @@ textarea:focus {
   background-color: #ecb365;
   outline: none;
 }
-.centered {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 9rem;
-  left: 0;
-  right: 0;
-  margin: 2%;
-}
-.letter {
-  position: absolute;
-  width: 30rem;
-  margin: 0%;
-  perspective: 60rem;
-}
-.side {
-  height: 15rem;
-  background-color: #041c32;
-  outline: 1px solid transparent;
-}
-.side:nth-of-type(1) {
-  padding: 2rem 2rem 0;
-  border-radius: 2rem 2rem 0 0;
-  box-shadow: inset 0 1rem 3rem #064663;
-}
-.side:nth-of-type(2) {
-  padding: 2rem;
-  border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 0.1rem 0.1rem #041c32, inset 0 -1rem 3rem #064663;
-  text-align: right;
-}
 .envelope {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 2rem;
   margin: auto;
 }
 .envelope.front {
+  position: absolute;
   width: 10rem;
   height: 8rem;
   border-radius: 0 0 1rem 1rem;
@@ -637,12 +640,14 @@ textarea:focus {
   z-index: -9999;
 }
 .sent .letter {
+  top: 5rem;
   animation: scaleLetter 1s forwards ease-in,
     pushLetter 0.5s 1.33s forwards ease-out;
   z-index: 9998;
 }
 .sent .side:nth-of-type(1) {
   margin-top: 0%;
+
   transform-origin: 0 100%;
   animation: closeLetter 0.66s forwards ease-in;
 }
@@ -659,8 +664,8 @@ textarea:focus {
 .sent .result-message {
   z-index: 9999;
   opacity: 1;
-  transition: 1s;
-  transform: translateY(10rem);
+  transition: 2s;
+  transform: translateY(12rem);
 }
 @keyframes closeLetter {
   50% {
@@ -728,6 +733,11 @@ textarea:focus {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .letter {
+    position: absolute;
+    width: 30rem;
+    perspective: 60rem;
+  }
   .side {
     margin-left: 10%;
     margin-right: 10%;
@@ -736,29 +746,21 @@ textarea:focus {
   .side:nth-of-type(1) {
     margin-top: 5%;
   }
-  .letter {
-    position: absolute;
-    width: 25rem;
-    perspective: 60rem;
-  }
 }
 /* ----------------------------------------- Footer Styles ----------------------------------------- */
-.foo {
-  padding: 0%;
-  margin: 0%;
-  left: 0%;
-  right: 0%;
+footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
   background: #ecb365;
   padding: 1.2em 0em 1em 0em;
+  top: calc(100vh - 67vh);
 }
-.foo .foolist,
-.foo .foomenu {
+footer .foolist,
+footer .foomenu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -767,22 +769,22 @@ textarea:focus {
   flex-wrap: wrap;
   padding: 0%;
 }
-.foo .foolist li,
-.foo .foomenu li {
+footer .foolist li,
+footer .foomenu li {
   list-style: none;
 }
-.foo .foolist li a {
+footer .foolist li a {
   font-size: 2em;
   color: #064663;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-.foo .foolist li a:hover {
+footer .foolist li a:hover {
   transform: translateY(-15px);
   color: #4e9f3d;
 }
-.foo .foomenu li a {
+footer .foomenu li a {
   font-size: 1em;
   color: #064663;
   margin: 0 10px;
@@ -791,37 +793,38 @@ textarea:focus {
   opacity: 0.2;
   text-decoration: none;
 }
-.foo .foomenu li a:hover {
+footer .foomenu li a:hover {
   opacity: 1;
   color: #4e9f3d;
 }
-.foo .wave {
+footer .wave {
   position: absolute;
-  /* top: -5em; */
+  top: -100px;
   left: 0;
-  width: 100vh;
+  width: 100%;
+  height: 100px;
   background: #041c32 url(images/wave.png);
   background-size: 1000px 100px;
 }
-.foo .wave#wave1 {
+footer .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave1 3s linear infinite;
 }
-.foo .wave#wave2 {
+footer .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave2 3s linear infinite;
 }
-.foo .wave#wave3 {
+footer .wave#wave3 {
   z-index: 1000;
   opacity: 0.25;
   bottom: 15px;
   animation: animateWave1 2s linear infinite;
 }
-.foo .wave#wave4 {
+footer .wave#wave4 {
   z-index: 999;
   opacity: 0.75;
   bottom: 20px;
@@ -852,11 +855,15 @@ footer p {
   opacity: 0.8;
 }
 @media only screen and (max-width: 600px) {
-  .foo .foolist li a {
+  footer {
+
+    top: calc(100vh - 65vh);
+  }
+  footer .foolist li a {
     font-size: 1.5em;
     margin: 0 8px;
   }
-  .foo .foomenu li a {
+  footer .foomenu li a {
     font-size: 0.75em;
     margin: 0 8px;
   }
