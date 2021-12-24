@@ -1,7 +1,12 @@
 /* ------------------------------------------- HTML Styles ------------------------------------------- */
 html {
   scroll-behavior: smooth;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+@media only screen and (max-width: 750px) {
+  html {
+    overflow-y: visible;
+  }
 }
 /* ------------------------------------------- Body Styles ------------------------------------------- */
 body {
@@ -308,6 +313,8 @@ body {
 .ability {
   margin: 0%;
   padding: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -474,7 +481,7 @@ body {
   margin: 0%;
   padding: 0%;
   overflow-y: visible;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,7 +497,7 @@ body {
   align-items: center;
   left: 0;
   right: 0;
-  margin: 1%;
+  margin: 0%;
 }
 .letter {
   position: absolute;
@@ -649,11 +656,11 @@ textarea:focus {
   margin-top: 0%;
 
   transform-origin: 0 100%;
-  animation: closeLetter 0.50s forwards ease-in;
+  animation: closeLetter 0.5s forwards ease-in;
 }
 .sent .side:nth-of-type(1) h1,
 .sent .side:nth-of-type(1) textarea {
-  animation: fadeOutText 0.50s forwards linear;
+  animation: fadeOutText 0.5s forwards linear;
 }
 .sent button {
   background-color: #041c32;
@@ -787,7 +794,7 @@ footer .foolist li a:hover {
 footer .foomenu li a {
   font-size: 1em;
   color: #064663;
-  margin: 0 10px;
+  margin: 0 8px;
   display: inline-block;
   transition: 0.5s;
   opacity: 0.2;
@@ -856,8 +863,7 @@ footer p {
 }
 @media only screen and (max-width: 600px) {
   footer {
-
-    top: calc(100vh - 65vh);
+    top: calc(100vh - 67vh);
   }
   footer .foolist li a {
     font-size: 1.5em;
