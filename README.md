@@ -30,4 +30,4 @@ Check out my site [Ambattz](https://ambattz.github.io/Ambattz/).
 
 # Screenshots
 
-![2022-01-30 (5)](https://user-images.githubusercontent.com/69767685/151709226-724f7bb0-cd7a-4b2a-aa98-8754e71690e0.png)
+![2022-05-10 (19)](https://user-images.githubusercontent.com/69767685/167648878-93829552-76f4-4372-b724-0e2ab30e92bf.png)
