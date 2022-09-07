@@ -24,7 +24,7 @@ Ambattz/Ambattz is a ✨ special ✨ repository because its `README.md` (this fi
 You can click the Preview link to take a look at your changes.
 --->
 
-Check out my site [Ambattz](https://ambattz.github.io/Ambattz/).
+Check out my site [Ambattz](https://ambattz.github.io/Ancient_Portfolio_Ambattz/).
 
 
 
